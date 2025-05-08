@@ -1,5 +1,5 @@
 site_name: AWS Solution Architect Pro Checklist
-site_url: https://sergey-rsa.github.ioaws-architect-doc/
+site_url: https://sergey-rsa.github.io/aws-architect-doc/
 theme:
   name: material
   features:
