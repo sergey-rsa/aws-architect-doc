@@ -61,6 +61,7 @@ Exam type: A=associate. P=professional.
 | **Amazon ElastiCache**  | **A1 / P2** | Управляемый кэш Redis/Memcached                           | Cluster-Mode On/Off, Multi-AZ с Auto-Failover, Data Tiering, шифрование in-transit/at-rest, Backup/Restore, Parameter Groups. [Cheat Sheet](https://tutorialsdojo.com/amazon-elasticache/) |
 | **Amazon DocumentDB**   | **A1 / P1** | MongoDB-совместимая управляемая документная БД            | 6-копий хранения в 3 AZ, Reader/Writer Endpoints, авто-масштабирование instance/storage, ограниченный API vs MongoDB. [Cheat Sheet](https://tutorialsdojo.com/amazon-documentdb/) |
 | **Amazon Timestream**   | **A1 / P1** | Serverless time-series БД для IoT и операционных метрик   | Memory vs Magnetic Store, Retention Policies, server-side rollups, SQL-like queries, autoscale ingest rate. [Cheat Sheet](https://tutorialsdojo.com/amazon-timestream/)           |
+| **Amazon Neptune**      | **A1 / P1** | fully managed графовая база данных   | Предназначенна для хранения и запросов связанных данных с высокой производительностью. Поддерживает как графы свойств (Property Graph), так и семантические графы (RDF).  (Нужно знать, что такая есть, это достаточно )      |
 
 ## 4. Networking & Content Delivery
 
@@ -92,12 +93,112 @@ Exam type: A=associate. P=professional.
 | **AWS CloudHSM**                                        | **A1 / P1**           | Выделенные HSM для критичных ключей                       | Cluster Modes, Backup & Restore, Client SDK, High Availability, FIPS 140-2. [Cheat Sheet](https://tutorialsdojo.com/aws-cloudhsm/) |
 | **AWS Shield & AWS WAF**                                | **A2 / P3**           | Защита от DDoS (Shield) и веб-угроз (WAF)                  | Shield Standard/Advanced, WebACL, Managed Rules, Rate-Based Rules, CAPTCHA, integration with CloudFront/ALB. [Shield](https://tutorialsdojo.com/aws-shield/) / [WAF](https://tutorialsdojo.com/aws-waf/) |
 | **AWS Firewall Manager**                                | **A1 / P3**           | Централизованное управление политиками безопасности       | Policy Types (WAF, Shield Advanced, Security Groups), Organization Scopes, Compliance Reports. [Cheat Sheet](https://tutorialsdojo.com/aws-firewall-manager/) |
-| **Amazon Inspector**                                    | **A1 / P2**           | Автоматизированная оценка уязвимостей                     | Assessment Targets, Templates, Rules Packages (CIS/PCI), Findings, Integration with Security Hub. [Cheat Sheet](https://tutorialsdojo.com/amazon-inspector/) |
-| **AWS Config**                                          | **A2 / P3**           | Непрерывный аудит конфигураций ресурсов                   | Config Rules (managed/custom), Conformance Packs, Aggregators, Remediation, Recording Groups. [Cheat Sheet](https://tutorialsdojo.com/aws-config/) |
-| **Amazon GuardDuty**                                    | **A1 / P2**           | Обнаружение угроз на основе ML и логов                     | Threat Lists, Anomaly Detection, Findings, Integration with Security Hub, EventBridge Actions. [Cheat Sheet](https://tutorialsdojo.com/amazon-guardduty/) |
 | **AWS Security Hub**                                    | **A1 / P2**           | Аггрегация и управление предупреждениями безопасности     | Standards (CIS, PCI), Insights, Automations, Cross-Account Aggregation. [Cheat Sheet](https://tutorialsdojo.com/aws-security-hub/) |
 | **Amazon Macie**                                        | **A1 / P1**           | Классификация и защита конфиденциальных данных в S3      | Sensitive Data Discovery, Data Access Monitoring, Alerts, Integration with Security Hub. [Cheat Sheet](https://tutorialsdojo.com/amazon-macie/) |
+| **AWS Config**                                          | **A2 / P3**           | Непрерывный аудит конфигураций ресурсов                   | Config Rules (managed/custom), Conformance Packs, Aggregators, Remediation, Recording Groups. [Cheat Sheet](https://tutorialsdojo.com/aws-config/) |
+| **Amazon GuardDuty**                                    | **A1 / P2**           | Обнаружение угроз на основе ML и логов                     | Threat Lists, Anomaly Detection, Findings, Integration with Security Hub, EventBridge Actions. [Cheat Sheet](https://tutorialsdojo.com/amazon-guardduty/) |
 | **Amazon Detective**                                    | **A1 / P2**           | Анализ и расследование инцидентов безопасности            | Graph Modeling, Timeline View, Integration with CloudTrail/GuardDuty/Macie, Root-Cause Analysis. [Cheat Sheet](https://tutorialsdojo.com/amazon-detective/) |
+| **Amazon Inspector**                                    | **A1 / P2**           | Автоматизированная оценка уязвимостей                     | Assessment Targets, Templates, Rules Packages (CIS/PCI), Findings, Integration with Security Hub. [Cheat Sheet](https://tutorialsdojo.com/amazon-inspector/) |
+
+## AWS Security Services - подробнее об самых запутаных... :)
+
+### 1. Amazon Inspector
+
+**Назначение:**  
+Автоматическое сканирование уязвимостей в EC2, Lambda и контейнерах (ECR).
+
+**Возможности:**
+- Проверка на CVE-уязвимости.
+- Сканирование образов при push в Amazon ECR.
+- Приоритизация уязвимостей по уровню риска.
+- Поддержка стандартов безопасности (CIS, PCI и др.).
+- Интеграция с AWS Organizations, EventBridge, SNS.
+
+**Когда использовать:**
+- При CI/CD-деплое.
+- Для соответствия требованиям безопасности.
+- Для регулярных проверок инфраструктуры.
+
+**Отличие от других:**
+- Фокус на **уязвимостях и конфигурации ресурсов**, а не на анализе поведения или логов.
+
+---
+
+### 2. AWS Config
+
+**Назначение:**  
+Отслеживание изменений конфигурации ресурсов AWS и проверка соответствия политикам.
+
+**Возможности:**
+- История изменений и связей между ресурсами.
+- AWS Config Rules (наборы политик соответствия).
+- Conformance Packs (группы правил по стандартам).
+- Хранение данных для аудита.
+- Интеграция с CloudTrail, Security Hub.
+
+**Когда использовать:**
+- Для аудита и compliance.
+- Для мониторинга drifts в IaC.
+- В средах с жёсткими стандартами (NIST, HIPAA).
+
+**Отличие от других:**
+- Не ищет угрозы, а анализирует **конфигурации и изменения ресурсов**.
+
+---
+
+### 3. Amazon GuardDuty
+
+**Назначение:**  
+Выявление угроз на основе анализа логов (CloudTrail, VPC Flow Logs, DNS Logs).
+
+**Возможности:**
+- ML-детектирование аномалий и угроз.
+- Обнаружение несанкционированного доступа, майнинга, ботнетов.
+- Поддержка multi-account в Organizations.
+- Интеграция с EventBridge, Security Hub.
+
+**Когда использовать:**
+- Для обнаружения атак и подозрительного поведения.
+- В Security Operations Center.
+- В продуктивной облачной среде.
+
+**Отличие от других:**
+- Не проверяет конфигурации, а **анализирует поведение и логи**.
+
+---
+
+### 4. Amazon Detective
+
+**Назначение:**  
+Анализ и расследование инцидентов безопасности на основе логов и связей.
+
+**Возможности:**
+- Построение графов связей между действиями, аккаунтами, ресурсами.
+- Визуализация подозрительной активности.
+- Глубокий анализ событий GuardDuty.
+- Хронология инцидентов.
+
+**Когда использовать:**
+- После алерта от GuardDuty.
+- Для расследования сложных инцидентов (компрометации IAM и др.).
+- При построении систем Threat Hunting.
+
+**Отличие от других:**
+- Не обнаруживает угрозы, а **анализирует последствия и связи**.
+
+---
+
+## 🧩 Сравнительная таблица
+
+| Сервис            | Назначение                    | Основные данные            | Специализация                      |
+|------------------|-------------------------------|----------------------------|------------------------------------|
+| Amazon Inspector | Сканирование уязвимостей      | Ресурсы и образы           | Security Assessment (CVE)         |
+| AWS Config       | Аудит конфигураций            | Конфигурации и метаданные  | Compliance и Configuration Drift  |
+| GuardDuty        | Обнаружение угроз             | Логи и сетевой трафик      | Threat Detection и ML             |
+| Detective        | Расследование инцидентов      | События, логи, связи       | Threat Investigation               |
+
+---
+
 
 ## 6. Management & Governance
 
