@@ -1,0 +1,1385 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sergey-rsa.github.io/aws-architect-doc/">
+      
+      
+      
+        <link rel="next" href="devopspath/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.12">
+    
+    
+      
+        <title>AWS Solution Architect Pro Checklist</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.2afb09e1.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="css/custom.css">
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#aws-solutions-architect-assocciateprofessional-exam-notes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="AWS Solution Architect Pro Checklist" class="md-header__button md-logo" aria-label="AWS Solution Architect Pro Checklist" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            AWS Solution Architect Pro Checklist
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AWS Solutions Architect Assocciate/Professional Exam notes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+  
+    
+  
+  AWS Solutions Architect Assocciate/Professional Exam notes
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="devopspath/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Devopspath
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="AWS Solution Architect Pro Checklist" class="md-nav__button md-logo" aria-label="AWS Solution Architect Pro Checklist" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    AWS Solution Architect Pro Checklist
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    AWS Solutions Architect Assocciate/Professional Exam notes
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="devopspath/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Devopspath
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="aws-solutions-architect-assocciateprofessional-exam-notes">AWS Solutions Architect Assocciate/Professional Exam notes</h1>
+<hr />
+<h1 id="important-to-know-for-professional-exam">Important to know for Professional exam</h1>
+<p><strong>AWS Well-Architected framework</strong>
+<a href="https://aws.amazon.com/architecture/well-architected/?wa-lens-whitepapers.sort-by=item.additionalFields.sortDate&amp;wa-lens-whitepapers.sort-order=desc&amp;wa-guidance-whitepapers.sort-by=item.additionalFields.sortDate&amp;wa-guidance-whitepapers.sort-order=desc">AWS Well-Architected framework</a></p>
+<ul>
+<li><strong>Features vs. Services:</strong> Only main services are included. Features or sub-services (e.g., "Blocking an IP Address") are excluded to maintain clarity.</li>
+<li><strong>Concepts Included:</strong> Concepts like "Big Data Architecture" and "Cloud Migration Strategies - The 7Rs" as they are integral to understanding AWS services and their applications.</li>
+</ul>
+<h2 id="_1">Глубина</h2>
+<p>Exam type: A=associate. P=professional.</p>
+<p>1-3 - уровень, где 1 - знать что это, 2 - понимать как использовать  3 - надо знать очень хорошо</p>
+<hr />
+<h2 id="1-compute-services">1. Compute Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon EC2</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Виртуальные серверы любого размера</td>
+<td>Типы инстансов, Launch Templates, EC2 Auto Scaling, Spot &amp; Savings Plans, Nitro, ENI. <a href="https://tutorialsdojo.com/amazon-elastic-compute-cloud-amazon-ec2/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Elastic Load Balancing</strong> (ALB/NLB/GWLB)</td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Балансировка L7 / L4 / appliance-LB</td>
+<td>Host/Path rules, TLS termination, Health Checks, Cross-Zone LB, GWLB для виртуальных фаерволов. <a href="https://tutorialsdojo.com/aws-elastic-load-balancing-elb/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Placement Groups</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>EC2 распределение по AZ/узлам</td>
+<td>Cluster/Spread/Partition; сценарии низкой задержки vs fault-isolation, лимиты. <a href="https://tutorialsdojo.com/aws-ec2-placement-groups/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Lambda</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Serverless функции по событиям</td>
+<td>Triggers (API GW, S3, SNS), версии/алиасы, Reserved/Provisioned Concurrency, Layers, DLQ, VPC интеграция. <a href="https://tutorialsdojo.com/aws-lambda/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon ECS</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Управляемая Docker-оркестрация</td>
+<td>EC2 vs Fargate Launch, Task Definitions, Service Auto Scaling, IAM Roles for Tasks. <a href="https://tutorialsdojo.com/amazon-elastic-container-service-amazon-ecs/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon EKS</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управляемый Kubernetes</td>
+<td>Managed Node Groups, IRSA, Control-plane SLA, CNI Networking, Add-ons. <a href="https://tutorialsdojo.com/amazon-elastic-kubernetes-service-eks/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS App Runner</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Source-to-URL развертывание контейнеров</td>
+<td>GitHub/ECR авто-деплой, Auto Scaling по RPS, HTTPS по умолчанию, IAM SLR. <a href="https://tutorialsdojo.com/aws-app-runner/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Fargate</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Serverless запуск контейнеров</td>
+<td>CPU/Memory per task, Fargate Spot, FireLens логирование, EFS volumes. <a href="https://tutorialsdojo.com/aws-fargate/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Batch</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Пакетные / HPC-джобы</td>
+<td>Managed CE (EC2/Fargate), Job Queues &amp; Definitions, Array Jobs, Spot-pricing. <a href="https://tutorialsdojo.com/aws-batch/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Outposts</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>AWS-оборудование on-prem</td>
+<td>EC2/EBS/RDS/EKS on Outposts, локальный S3, связь с Region, форм-факторы Rack/Server. <a href="https://tutorialsdojo.com/aws-outposts/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Wavelength</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>5G edge-вычисления</td>
+<td>Одно-значная мс-латентность, поддержка EC2/EKS, traffic local-breakout. <a href="https://tutorialsdojo.com/aws-wavelength/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Local Zones</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Edge-зоны в крупных городах</td>
+<td>Локальный EC2/EBS/ALB, отдельный sub-region, low-latency к клиентам. <a href="https://tutorialsdojo.com/aws-local-zones/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-storage-services">2. Storage Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon S3</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Объектное хранилище «неограниченной» ёмкости</td>
+<td>Storage Classes, Versioning, MFA-Delete, Lifecycle Policies, Encryption (SSE-S3/KMS/Client), Replication, Object Lock, Access Points, OAI/OAC, Transfer Acceleration. <a href="https://tutorialsdojo.com/amazon-s3/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon EBS</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Блочные тома для EC2</td>
+<td>gp2/gp3, io1/io2, st1/sc1, Multi-Attach, Fast Snapshot Restore, Elastic Volumes, шифрование, Backups &amp; Snapshots, Performance IOPS/Throughput квоты. <a href="https://tutorialsdojo.com/amazon-ebs/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon EFS</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Распределённое NFS-хранилище</td>
+<td>General-Purpose &amp; Max-IO, Lifecycle Management (EFS-IA), Throughput modes, Access Points &amp; Posix ACL, Mount Targets/Security Groups, Backup. <a href="https://tutorialsdojo.com/amazon-efs/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon FSx</strong> (Windows, Lustre, ONTAP, OpenZFS)</td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управляемые третье-сторонние файловые системы</td>
+<td>SMB + AD integration, Lustre HPC, ONTAP SnapMirror/FlexClone, OpenZFS snapshots; SSD/HDD throughput, multi-AZ (Windows), data tiering. <a href="https://tutorialsdojo.com/amazon-fsx/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon S3 Glacier / Deep Archive</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Архивное хранение с низкой стоимостью</td>
+<td>Vaults &amp; Archives, Retrieval Tiers (Expedited/Standard/Bulk), Vault Lock (WORM), Min storage 90/180 дней, Lifecycle Transition из S3. <a href="https://tutorialsdojo.com/amazon-s3-glacier/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Storage Gateway</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Гибридные File/Volume/Tape шлюзы</td>
+<td>Cached vs Stored Volumes, File Gateway (NFS/SMB), Tape Gateway (VTL), локальный кэш, офф-лайн восстановление, интеграция с AWS Backup. <a href="https://tutorialsdojo.com/aws-storage-gateway/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Backup</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Централизованный сервис бэкапов</td>
+<td>Backup Plans &amp; Vaults, Cross-Region/Account copy, Lifecycle to Glacier, AWS Organizations, Backtrack Policy. <a href="https://tutorialsdojo.com/aws-backup/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS DataSync</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Высокоскоростной перенос файлов</td>
+<td>Agent (VM/EC2), NFS/SMB/S3/EFS/FSx endpoints, filters, incremental transfers, scheduling, encryption-in-transit, CloudWatch metrics. <a href="https://tutorialsdojo.com/aws-datasync/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Data Exchange</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Публикация и подписка на внешние наборы данных</td>
+<td>Products, Datasets, Revisions, Subscription Jobs, Delivery to S3, Entitlements API. <a href="https://tutorialsdojo.com/aws-data-exchange/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Transfer Family</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Управляемый SFTP/FTPS/FTP → S3/EFS</td>
+<td>Identity Providers, custom hostname, VPC Endpoints, auto-scaling, CloudWatch logging, KMS-шифрование. <a href="https://tutorialsdojo.com/aws-transfer-family/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-database-services">3. Database Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon RDS</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Управляемые реляционные БД (MySQL, PostgreSQL, SQL Server и др.)</td>
+<td>Multi-AZ, Read Replicas, RDS Proxy, Snapshots &amp; PITR, Performance Insights, Reserved Instances vs Savings Plans, IAM DB Auth. <a href="https://tutorialsdojo.com/amazon-relational-database-service-amazon-rds/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Aurora</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Высокопроизводительная совместимая с MySQL/PostgreSQL СУБД</td>
+<td>6-копий в 3 AZ, Global Database, Serverless v2, Backtrack, Parallel Query, авто-failover &lt; 30 с. <a href="https://tutorialsdojo.com/amazon-aurora/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon DynamoDB</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Serverless NoSQL (ключ-значение/документ)</td>
+<td>On-Demand vs Provisioned, GSI/LSI, DAX, PartiQL, Streams, TTL, Backup/PITR, Auto Scaling &amp; Adaptive Capacity, Global Tables. <a href="https://tutorialsdojo.com/amazon-dynamodb/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Redshift</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Колонночный аналитический Data Warehouse</td>
+<td>RA3 vs DC2, Spectrum, Concurrency Scaling, AQUA, Materialized Views, Snapshots &amp; Cross-Region DR, WLM queues. <a href="https://tutorialsdojo.com/amazon-redshift/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon ElastiCache</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управляемый кэш Redis/Memcached</td>
+<td>Cluster-Mode On/Off, Multi-AZ с Auto-Failover, Data Tiering, шифрование in-transit/at-rest, Backup/Restore, Parameter Groups. <a href="https://tutorialsdojo.com/amazon-elasticache/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon DocumentDB</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>MongoDB-совместимая управляемая документная БД</td>
+<td>6-копий хранения в 3 AZ, Reader/Writer Endpoints, авто-масштабирование instance/storage, ограниченный API vs MongoDB. <a href="https://tutorialsdojo.com/amazon-documentdb/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Timestream</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Serverless time-series БД для IoT и операционных метрик</td>
+<td>Memory vs Magnetic Store, Retention Policies, server-side rollups, SQL-like queries, autoscale ingest rate. <a href="https://tutorialsdojo.com/amazon-timestream/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Neptune</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>fully managed графовая база данных</td>
+<td>Предназначенна для хранения и запросов связанных данных с высокой производительностью. Поддерживает как графы свойств (Property Graph), так и семантические графы (RDF).  (Нужно знать, что такая есть, это достаточно )</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-networking-content-delivery">4. Networking &amp; Content Delivery</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon VPC</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Логически изолированная сеть в AWS</td>
+<td>CIDR-планирование, Subnets (public/private), Route Tables, IGW/NAT, Security Groups vs NACL, VPC Endpoints, VPC Peering, Flow Logs, IPv6, DNS Options. <a href="https://tutorialsdojo.com/amazon-vpc/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Route 53</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>DNS и маршрутизация трафика</td>
+<td>Hosted Zones, Record Types, Alias vs CNAME, Routing Policies (Simple, Weighted, Latency, Geo, Failover), Health Checks, DNSSEC. <a href="https://tutorialsdojo.com/amazon-route-53/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon CloudFront</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Глобальная CDN</td>
+<td>Edge Locations, Cache Behaviors, Origin Types (S3, ALB, API Gateway), Signed URLs/Cookies, Field-Level Encryption, Origin Shield, Invalidations. <a href="https://tutorialsdojo.com/amazon-cloudfront/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Global Accelerator</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Оптимизация доступности и производительности</td>
+<td>Static Anycast IP, Endpoint Groups, Health Checks, Regional Failover, TCP/UDP-ускорение по AWS backbone. <a href="https://tutorialsdojo.com/aws-global-accelerator/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Direct Connect</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Выделенное соединение On-Prem ↔ AWS</td>
+<td>LAG, Private/Public/Transit VIF, BGP, MACsec, DX Gateway, VPN-failover, оплата Port-hour + Data. <a href="https://tutorialsdojo.com/aws-direct-connect/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Elastic Load Balancing (ELB)</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Балансировка нагрузки L7/ALB, L4/NLB, appliance</td>
+<td>Listeners, Target Groups, TLS Termination, Sticky Sessions, Health Checks, Cross-Zone Load, Access Logs, Connection Draining. <a href="https://tutorialsdojo.com/aws-elastic-load-balancing-elb/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Network Firewall</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управляемый сетевой фаервол для VPC</td>
+<td>Stateful/stateless rules, Suricata-движок, Firewall Policies &amp; Rule Groups, Logging to CloudWatch/Kinesis, AWS Firewall Manager интеграция. <a href="https://tutorialsdojo.com/aws-network-firewall/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-security-identity-compliance">5. Security, Identity &amp; Compliance</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS IAM</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Управление идентификацией и доступом</td>
+<td>Пользователи, группы, роли, политики JSON, MFA, IAM Roles for Service, Federation (OIDC/SAML), IAM Access Analyzer. <a href="https://tutorialsdojo.com/aws-identity-and-access-management-iam/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS IAM Access Analyzer</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Анализ внешних прав доступа к ресурсам</td>
+<td>Генерация IAM Policy на основании реального доступа, Resource Analyzer для S3, KMS, IAM, Lake Formation. <a href="https://tutorialsdojo.com/aws-iam-access-analyzer/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS STS (Security Token Service)</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Выдача временных учётных данных</td>
+<td>AssumeRole, Federation, Web Identity, Session Duration, Policy Evaluation. <a href="https://tutorialsdojo.com/aws-security-token-service-sts/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CloudTrail</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Аудит и запись API-логов</td>
+<td>Management vs Data Events, Multi-Region Trails, Insights, лог-file integrity validation, интеграция с CloudWatch Logs. <a href="https://tutorialsdojo.com/aws-cloudtrail/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS KMS</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Централизованное управление криптографическими ключами</td>
+<td>Symmetric vs Asymmetric CMKs, Key Policies vs IAM Policies, Envelope Encryption, Automatic Rotation, Grants. <a href="https://tutorialsdojo.com/aws-key-management-service-aws-kms/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Cognito</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Аутентификация и авторизация для веб и мобильных приложений</td>
+<td>User Pools, Identity Pools, Federated Identities, Hosted UI, Triggers (Lambda), Security Features. <a href="https://tutorialsdojo.com/amazon-cognito/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Directory Service</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Интеграция с Microsoft AD в AWS</td>
+<td>AD Connector, AWS Managed AD, Simple AD, Trusts, AD-aware приложения. <a href="https://tutorialsdojo.com/aws-directory-service/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS IAM Identity Center (AWS SSO)</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Централизованное SSO для AWS и SaaS</td>
+<td>Permission Sets, SCIM Provisioning, AD Connector, Credential Synchronization, Session Duration. <a href="https://tutorialsdojo.com/aws-single-sign-on-aws-sso/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Control Tower</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Быстрое развёртывание безопасной многоконтурной среды</td>
+<td>Landing Zone, Guardrails (SCP/Config), Account Factory, Audit/Log Accounts, Lifecycle Events. <a href="https://tutorialsdojo.com/aws-control-tower/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Resource Access Manager (RAM)</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Безопасный шаринг ресурсов между аккаунтами</td>
+<td>Resource Shares, Principals (OU, Account), supported ARNs (VPC, Transit Gateway, License Configurations). <a href="https://tutorialsdojo.com/aws-resource-access-manager-ram/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Certificate Manager (ACM)</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Управление SSL/TLS сертификатами</td>
+<td>Public vs Private CA, DNS/Email Validation, Regional vs Global (CloudFront), ACM PCA, Rotation. <a href="https://tutorialsdojo.com/aws-certificate-manager/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CloudHSM</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Выделенные HSM для критичных ключей</td>
+<td>Cluster Modes, Backup &amp; Restore, Client SDK, High Availability, FIPS 140-2. <a href="https://tutorialsdojo.com/aws-cloudhsm/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Shield &amp; AWS WAF</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Защита от DDoS (Shield) и веб-угроз (WAF)</td>
+<td>Shield Standard/Advanced, WebACL, Managed Rules, Rate-Based Rules, CAPTCHA, integration with CloudFront/ALB. <a href="https://tutorialsdojo.com/aws-shield/">Shield</a> / <a href="https://tutorialsdojo.com/aws-waf/">WAF</a></td>
+</tr>
+<tr>
+<td><strong>AWS Firewall Manager</strong></td>
+<td style="text-align: center;"><strong>A1 / P3</strong></td>
+<td>Централизованное управление политиками безопасности</td>
+<td>Policy Types (WAF, Shield Advanced, Security Groups), Organization Scopes, Compliance Reports. <a href="https://tutorialsdojo.com/aws-firewall-manager/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Security Hub</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Аггрегация и управление предупреждениями безопасности</td>
+<td>Standards (CIS, PCI), Insights, Automations, Cross-Account Aggregation. <a href="https://tutorialsdojo.com/aws-security-hub/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Macie</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Классификация и защита конфиденциальных данных в S3</td>
+<td>Sensitive Data Discovery, Data Access Monitoring, Alerts, Integration with Security Hub. <a href="https://tutorialsdojo.com/amazon-macie/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Config</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Непрерывный аудит конфигураций ресурсов</td>
+<td>Config Rules (managed/custom), Conformance Packs, Aggregators, Remediation, Recording Groups. <a href="https://tutorialsdojo.com/aws-config/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon GuardDuty</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Обнаружение угроз на основе ML и логов</td>
+<td>Threat Lists, Anomaly Detection, Findings, Integration with Security Hub, EventBridge Actions. <a href="https://tutorialsdojo.com/amazon-guardduty/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Detective</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Анализ и расследование инцидентов безопасности</td>
+<td>Graph Modeling, Timeline View, Integration with CloudTrail/GuardDuty/Macie, Root-Cause Analysis. <a href="https://tutorialsdojo.com/amazon-detective/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Inspector</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Автоматизированная оценка уязвимостей</td>
+<td>Assessment Targets, Templates, Rules Packages (CIS/PCI), Findings, Integration with Security Hub. <a href="https://tutorialsdojo.com/amazon-inspector/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="aws-security-services-">AWS Security Services - подробнее об самых запутаных... :)</h2>
+<h3 id="1-amazon-inspector">1. Amazon Inspector</h3>
+<p><strong>Назначение:</strong><br />
+Автоматическое сканирование уязвимостей в EC2, Lambda и контейнерах (ECR).</p>
+<p><strong>Возможности:</strong>
+- Проверка на CVE-уязвимости.
+- Сканирование образов при push в Amazon ECR.
+- Приоритизация уязвимостей по уровню риска.
+- Поддержка стандартов безопасности (CIS, PCI и др.).
+- Интеграция с AWS Organizations, EventBridge, SNS.</p>
+<p><strong>Когда использовать:</strong>
+- При CI/CD-деплое.
+- Для соответствия требованиям безопасности.
+- Для регулярных проверок инфраструктуры.</p>
+<p><strong>Отличие от других:</strong>
+- Фокус на <strong>уязвимостях и конфигурации ресурсов</strong>, а не на анализе поведения или логов.</p>
+<hr />
+<h3 id="2-aws-config">2. AWS Config</h3>
+<p><strong>Назначение:</strong><br />
+Отслеживание изменений конфигурации ресурсов AWS и проверка соответствия политикам.</p>
+<p><strong>Возможности:</strong>
+- История изменений и связей между ресурсами.
+- AWS Config Rules (наборы политик соответствия).
+- Conformance Packs (группы правил по стандартам).
+- Хранение данных для аудита.
+- Интеграция с CloudTrail, Security Hub.</p>
+<p><strong>Когда использовать:</strong>
+- Для аудита и compliance.
+- Для мониторинга drifts в IaC.
+- В средах с жёсткими стандартами (NIST, HIPAA).</p>
+<p><strong>Отличие от других:</strong>
+- Не ищет угрозы, а анализирует <strong>конфигурации и изменения ресурсов</strong>.</p>
+<hr />
+<h3 id="3-amazon-guardduty">3. Amazon GuardDuty</h3>
+<p><strong>Назначение:</strong><br />
+Выявление угроз на основе анализа логов (CloudTrail, VPC Flow Logs, DNS Logs).</p>
+<p><strong>Возможности:</strong>
+- ML-детектирование аномалий и угроз.
+- Обнаружение несанкционированного доступа, майнинга, ботнетов.
+- Поддержка multi-account в Organizations.
+- Интеграция с EventBridge, Security Hub.</p>
+<p><strong>Когда использовать:</strong>
+- Для обнаружения атак и подозрительного поведения.
+- В Security Operations Center.
+- В продуктивной облачной среде.</p>
+<p><strong>Отличие от других:</strong>
+- Не проверяет конфигурации, а <strong>анализирует поведение и логи</strong>.</p>
+<hr />
+<h3 id="4-amazon-detective">4. Amazon Detective</h3>
+<p><strong>Назначение:</strong><br />
+Анализ и расследование инцидентов безопасности на основе логов и связей.</p>
+<p><strong>Возможности:</strong>
+- Построение графов связей между действиями, аккаунтами, ресурсами.
+- Визуализация подозрительной активности.
+- Глубокий анализ событий GuardDuty.
+- Хронология инцидентов.</p>
+<p><strong>Когда использовать:</strong>
+- После алерта от GuardDuty.
+- Для расследования сложных инцидентов (компрометации IAM и др.).
+- При построении систем Threat Hunting.</p>
+<p><strong>Отличие от других:</strong>
+- Не обнаруживает угрозы, а <strong>анализирует последствия и связи</strong>.</p>
+<hr />
+<h2 id="_2">🧩 Сравнительная таблица</h2>
+<table>
+<thead>
+<tr>
+<th>Сервис</th>
+<th>Назначение</th>
+<th>Основные данные</th>
+<th>Специализация</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amazon Inspector</td>
+<td>Сканирование уязвимостей</td>
+<td>Ресурсы и образы</td>
+<td>Security Assessment (CVE)</td>
+</tr>
+<tr>
+<td>AWS Config</td>
+<td>Аудит конфигураций</td>
+<td>Конфигурации и метаданные</td>
+<td>Compliance и Configuration Drift</td>
+</tr>
+<tr>
+<td>GuardDuty</td>
+<td>Обнаружение угроз</td>
+<td>Логи и сетевой трафик</td>
+<td>Threat Detection и ML</td>
+</tr>
+<tr>
+<td>Detective</td>
+<td>Расследование инцидентов</td>
+<td>События, логи, связи</td>
+<td>Threat Investigation</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-management-governance">6. Management &amp; Governance</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CloudFormation</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Декларативное IaC для AWS</td>
+<td>Шаблоны (YAML/JSON), Change Sets, StackSets, Drift Detection, Nested Stacks, Stack Policies, Rollback Behaviors. <a href="https://tutorialsdojo.com/aws-cloudformation/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon CloudWatch</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Мониторинг метрик, логов, событий и алертов</td>
+<td>Metrics (1-min &amp; High-Res), Logs &amp; Insights, Alarms &amp; Composite Alarms, Dashboards, Synthetics, EventBridge интеграция. <a href="https://tutorialsdojo.com/amazon-cloudwatch/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Systems Manager</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Автоматизация операций и управление конфигурациями</td>
+<td>Session Manager, Run Command, Patch Manager, Automation, State Manager, Parameter Store (SecureString), Inventory, OpsCenter. <a href="https://tutorialsdojo.com/aws-systems-manager/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Trusted Advisor</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Рекомендации по Cost, Security, Performance, Fault Tolerance</td>
+<td>5 категорий чеков, Basic vs Business/Enterprise Support, Export Reports, Integration с AWS Support API. <a href="https://tutorialsdojo.com/aws-trusted-advisor/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Service Catalog</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Каталог одобренных продуктов и шаблонов</td>
+<td>Portfolios, Products, Constraints (Launch, Tag), Service Actions, Terraform/OpenAPI support. <a href="https://tutorialsdojo.com/aws-service-catalog/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Organizations</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Централизованное управление аккаунтами и политиками</td>
+<td>OU-иерархия, Consolidated Billing, SCPs, Tag Policies, AWS Control Tower интеграция. <a href="https://tutorialsdojo.com/aws-organizations/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS License Manager</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Управление лицензиями ПО</td>
+<td>License Configurations (vCPU, cores), Discovery via SSM Inventory, Cross-Region sync, Usage Tracking. <a href="https://tutorialsdojo.com/aws-license-manager/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Service Quotas</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управление квотами сервисов</td>
+<td>Просмотр текущих лимитов, Request Quota Increases, Quota Metrics, Cross-Account views. <a href="https://tutorialsdojo.com/aws-service-quotas/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CDK (Cloud Development Kit)</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>IaC с использованием языков программирования</td>
+<td>Constructs (L1–L3), Stacks, Apps, Synth → CFN, CLI Diff/Deploy, Context, Pipelines. <a href="https://tutorialsdojo.com/aws-cloud-development-kit-cdk/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Cloud Map</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Сервис обнаружения и маршрутизации ресурсов</td>
+<td>Namespaces, Services, Health Checks, DNS &amp; API discovery, интеграция с App Mesh/ECS. <a href="https://tutorialsdojo.com/aws-cloud-map/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-application-integration">7. Application Integration</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon SNS</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Публикация/подписка на сообщения</td>
+<td>Topics, подписки (HTTP/S, email, SMS, SQS, Lambda), Message Filtering, FIFO Topics, DLQ, SSE-KMS. <a href="https://tutorialsdojo.com/amazon-sns/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon SQS</strong></td>
+<td style="text-align: center;"><strong>A3 / P3</strong></td>
+<td>Очереди сообщений для асинхронной работы</td>
+<td>Standard vs FIFO, Visibility Timeout, Long/Short Polling, DLQ, VPC Endpoints, Batch API, SSE-KMS, мониторинг Approximate Age. <a href="https://tutorialsdojo.com/amazon-sqs/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Step Functions</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Оркестрация serverless-workflow</td>
+<td>Standard vs Express, ASL Definition, Catch/Retry, Map/Parallel, Integration с 200+ сервисами, Execution History. <a href="https://tutorialsdojo.com/aws-step-functions/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon EventBridge</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Серверless шина событий</td>
+<td>Default/Partner/Custom Bus, Rules (pattern-based), Schema Registry, Archives &amp; Replay, API Destinations, cross-region failover, DLQ. <a href="https://tutorialsdojo.com/amazon-eventbridge/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon MQ</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Управляемый брокер ActiveMQ/RabbitMQ</td>
+<td>Multi-AZ failover, AMQP/MQTT/STOMP/OpenWire, encryption in-transit/at-rest, LDAP auth, Prometheus-метрики. <a href="https://tutorialsdojo.com/amazon-mq/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS App Mesh</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Сервис-меш для микросервисов</td>
+<td>Virtual Nodes/Services, Traffic Routing (Canary, Weighted), mTLS, Envoy-observability (metrics/logs), интеграция с Cloud Map. <a href="https://tutorialsdojo.com/aws-app-mesh/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS SWF</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Управляемый workflow-движок</td>
+<td>Activity &amp; Decision Tasks, Timers, Task Lists, Coordination of long-running tasks, SDK integration. <a href="https://tutorialsdojo.com/aws-simple-workflow-service-swf/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Glue</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Серверless ETL и каталогизация данных</td>
+<td>Crawlers, Jobs (Spark), Data Catalog, Workflows, Glue Studio, интеграция с Lake Formation и Athena. <a href="https://tutorialsdojo.com/aws-glue/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS AppSync</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Серверless GraphQL API с офлайн и real-time</td>
+<td>Resolvers (DynamoDB, Lambda, OpenSearch), Subscriptions, Caching, IAM/Cognito/OIDC Auth. <a href="https://tutorialsdojo.com/aws-appsync/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-analytics-services">8. Analytics Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon Athena</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Ad-hoc SQL-запросы по данным в S3</td>
+<td>Интеграция с Glue Data Catalog, CTAS/UNLOAD, Partition Projection, Workgroups, Encryption at-rest/in-transit. <a href="https://tutorialsdojo.com/amazon-athena/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon EMR</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управляемый Hadoop/Spark кластер</td>
+<td>EMRFS для S3, Auto-Scaling, Instance Fleets/Groups, Bootstrap Actions, Serverless EMR. <a href="https://tutorialsdojo.com/amazon-emr/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Kinesis</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Потоковая обработка данных в реальном времени</td>
+<td>Data Streams (shards, Enhanced Fan-Out), Firehose (buffer size/interval), Data Analytics (SQL), Video Streams. <a href="https://tutorialsdojo.com/amazon-kinesis/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon QuickSight</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>BI-дашборды и визуализация</td>
+<td>SPICE in-memory engine, Row-Level Security, ML-Insights (анализ аномалий, прогнозы), Embedded Analytics. <a href="https://tutorialsdojo.com/amazon-quicksight/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Glue</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Серверless ETL и Data Catalog</td>
+<td>Crawlers, Jobs (PySpark/Scala), Workflows, Glue Studio, Schema Registry for Lake Formation. <a href="https://tutorialsdojo.com/aws-glue/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Redshift</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Аналитический data warehouse</td>
+<td>RA3 vs DC2, Spectrum, Concurrency Scaling, Materialized Views, WLM queues, Snapshot &amp; Restore. <a href="https://tutorialsdojo.com/amazon-redshift/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon OpenSearch Service</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Search &amp; лог-аналитика</td>
+<td>Domains, UltraWarm/Cold Storage, Index State Management, Fine-Grained Access, Kibana/OpenSearch Dashboards. <a href="https://tutorialsdojo.com/amazon-opensearch-service/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Data Pipeline</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Оркестрация ETL-пайплайнов</td>
+<td>Activities, Pipelines, Scheduler, Dependency Management, интеграция с S3/EMR/RDS. <a href="https://tutorialsdojo.com/aws-data-pipeline/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Lake Formation</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Управление и безопасность Data Lake</td>
+<td>LF-Tags, Governed Tables, Blueprints ingestion, Fine-Grained Access, Audit Logging. <a href="https://tutorialsdojo.com/aws-lake-formation/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Timestream</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Time-series БД для IoT и операционных метрик</td>
+<td>Memory vs Magnetic Store, Retention Policies, Server-side downsampling, SQL-like queries. <a href="https://tutorialsdojo.com/amazon-timestream/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-machine-learning-services">9. Machine Learning Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Amazon SageMaker</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Полный цикл ML: сборка, обучение, развертывание</td>
+<td>Studio IDE, Training Jobs, Hosted Endpoints, Pipelines, Autopilot, Debugger, Model Monitor. <a href="https://tutorialsdojo.com/amazon-sagemaker/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Comprehend</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>NLP: анализ тональности, сущностей, ключевых фраз</td>
+<td>Sentiment, Entities, Key Phrases, Syntax, Custom Classifiers, PII Detection, Batch vs Real-Time. <a href="https://tutorialsdojo.com/amazon-comprehend/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Rekognition</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Анализ изображений и видео: лица, объекты, контент-модерация</td>
+<td>Label Detection, Face Recognition, Celebrity Recognition, Text in Image, Unsafe Content, Streaming Video. <a href="https://tutorialsdojo.com/amazon-rekognition/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Lex</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Голосовые и чат-боты с NLU/ASR</td>
+<td>Intents, Slots, Prompts, Fulfillment via Lambda, Multi-language, Contexts, Versions &amp; Aliases. <a href="https://tutorialsdojo.com/amazon-lex/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Polly</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Преобразование текста в речь</td>
+<td>Standard &amp; Neural Voices, SSML Support, Lexicons, Speech Marks, API Streaming. <a href="https://tutorialsdojo.com/amazon-polly/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Translate</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Машинный перевод текста</td>
+<td>Real-time &amp; Batch Translation, Custom Terminology, Parallel Data, Formality Control. <a href="https://tutorialsdojo.com/amazon-translate/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Forecast</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Прогнозирование временных рядов</td>
+<td>Dataset Groups, Predictors, Forecast Export, Backtest Windows, Explainability. <a href="https://tutorialsdojo.com/amazon-forecast/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Kendra</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Интеллектуальный поиск по корпоративным данным</td>
+<td>Data Sources (S3, RDS, FSx), Query Autocomplete, Relevance Tuning, Access Control. <a href="https://tutorialsdojo.com/amazon-kendra/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Personalize</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Персональные рекомендации</td>
+<td>Datasets → Solutions → Campaigns, Event Tracker, Real-Time Recommendations, Filters. <a href="https://tutorialsdojo.com/amazon-personalize/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Textract</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Извлечение текста и структурированных данных из документов</td>
+<td>Detect Document Text, Analyze Document (Forms/Tables), Expense &amp; ID Models, Output JSON/CSV. <a href="https://tutorialsdojo.com/amazon-textract/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-developer-tools">10. Developer Tools</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS CodeCommit (will be removed soon)</strong></td>
+<td style="text-align: center;"><strong>A0 / P0</strong></td>
+<td>Управляемые Git-репозитории</td>
+<td>Ветвление, слияние, шифрование KMS, триггеры (SNS/Lambda), VPC Endpoints. <a href="https://tutorialsdojo.com/aws-codecommit/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CodeBuild</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>CI-сервис сборки и тестирования</td>
+<td><code>buildspec.yml</code>, Compute Types, кэширование (S3/EFS), batch builds, отчёты, VPC интеграция. <a href="https://tutorialsdojo.com/aws-codebuild/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CodeDeploy</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Автоматизация деплоя на EC2, Lambda, On-Prem</td>
+<td>In-Place vs Blue/Green, <code>appspec.yml</code>, Rollbacks, Lifecycle Hooks, интеграция с Auto Scaling. <a href="https://tutorialsdojo.com/aws-codedeploy/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CodePipeline</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Оркестрация CI/CD конвейера</td>
+<td>Stages &amp; Actions, Manual Approvals, Parallel Actions, cross-account Artifacts, Webhooks, интеграция с GitHub/CodeCommit. <a href="https://tutorialsdojo.com/aws-codepipeline/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS CodeStar</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Быстрый запуск DevOps-проектов</td>
+<td>Шаблоны проектов, интегрированный Dashboard, IAM-роли команд, единая консоль CI/CD. <a href="https://tutorialsdojo.com/aws-codestar/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS X-Ray</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Трассировка и анализ производительности</td>
+<td>Segments/Subsegments, Service Maps, Sampling Rules, рекурсия, интеграция с Lambda, ECS, EC2. <a href="https://tutorialsdojo.com/aws-x-ray/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Cloud9</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Облачный IDE с доступом к AWS</td>
+<td>Поддержка множества языков, совместное редактирование, терминал с IAM-ролью, SSH/EC2 среды. <a href="https://tutorialsdojo.com/aws-cloud9/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS SDKs</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Библиотеки для интеграции AWS в код</td>
+<td>Поддержка Python, JavaScript, Java, .NET и др.; автоматическая обработка подписей, retry logic, пагинация. <a href="https://tutorialsdojo.com/aws-software-development-kits-sdks/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon CodeGuru</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>ML-анализ кода и профилирование приложений</td>
+<td>Reviewer (Pull Request рекомендации), Profiler (узкие места CPU/Heap), интеграция с CodeCommit/GitHub. <a href="https://tutorialsdojo.com/amazon-codeguru/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS SAM (Serverless Application Model)</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Фреймворк для серверлес-приложений</td>
+<td><code>sam.yml</code> шаблоны, локальное тестирование, CLI команды (build, deploy), интеграция с API Gateway/Lambda/DynamoDB. <a href="https://tutorialsdojo.com/aws-serverless-application-model-sam/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="11-migration-transfer">11. Migration &amp; Transfer</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS Database Migration Service (DMS)</strong></td>
+<td style="text-align: center;"><strong>A2 / P3</strong></td>
+<td>Репликация и миграция БД</td>
+<td>Homogeneous vs Heterogeneous, Full Load + CDC, AWS SCT для преобразования схем, Multi-AZ, Replication Instance (классы инстансов, настройки масштабирования), Endpoints (S3, Kinesis, Redshift), мониторинг CloudWatch. <a href="https://tutorialsdojo.com/aws-database-migration-service/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Server Migration Service (SMS)</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Лифт-&amp;-шифт ВМ на EC2</td>
+<td>Agentless replication через AWS Connector, incremental replication, Launch Settings (instance type, subnet), Cutover orchestration, Integration с Migration Hub. <a href="https://tutorialsdojo.com/aws-server-migration-service-sms/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Application Migration Service (MGN)</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Лифт-&amp;-шифт серверов (преемник SMS)</td>
+<td>Continuous Block Replication, non-disruptive Tests, Launch Settings Blueprint, Post-launch Actions (SSM Automation), Orchestration через Migration Hub. <a href="https://tutorialsdojo.com/aws-application-migration-service/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS DataSync</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Высокоскоростной перенос файлов</td>
+<td>Agent (VM/EC2/OpsHub), NFS/SMB/S3/EFS/FSx endpoints, Filters, Scheduling, Encryption in-transit, VPC Endpoints, Metrics &amp; Logs. <a href="https://tutorialsdojo.com/aws-datasync/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Snowball &amp; Snowball Edge</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Физический перенос больших объёмов данных</td>
+<td>Устройства 50 TB/80 TB, Edge Compute (Lambda/EC2), End-to-End шифрование, Job Management (90-120 days), E-Ink этикетки, Integration с S3 Import/Export. <a href="https://tutorialsdojo.com/aws-snowball/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Migration Hub</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Централизованный трекинг миграций</td>
+<td>Aggregates status DMS/SMS/MGN, Application Discovery integration, Migration Projects, Permissions (MigrationHub-Dashboard), SDK &amp; CLI support. <a href="https://tutorialsdojo.com/aws-migration-hub/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Application Discovery Service</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Сбор характеристик on-prem инфраструктуры</td>
+<td>Agentless vs Agent-based, Server Specs / Process data, Export CSV, Integration с Migration Hub &amp; DMS, Dependencies Mapping. <a href="https://tutorialsdojo.com/aws-application-discovery-service/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Elastic Disaster Recovery (CloudEndure DRS)</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>DR / Recovery через непрерывную репликацию</td>
+<td>Continuous Replication Server, Staging Area ss, Recovery Instances, Launch Configuration Templates, Orchestration, Cost Optimization (journal, cutover). <a href="https://tutorialsdojo.com/aws-disaster-recovery/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="12-other-key-services">12. Other Key Services</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Название сервиса</strong></th>
+<th style="text-align: center;"><strong>Глубина (AX / PX)</strong></th>
+<th><strong>Кратко о применении</strong></th>
+<th><strong>Подробности</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AWS AppFlow</strong></td>
+<td style="text-align: center;"><strong>A2 / P2</strong></td>
+<td>Интеграция данных между AWS и SaaS</td>
+<td>Подключения к Salesforce, SAP, Google Analytics и др.; двунаправленные потоки; мэппинг и трансформации; расписания и триггеры; шифрование в-транзите. <a href="https://tutorialsdojo.com/aws-appflow/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Marketplace</strong></td>
+<td style="text-align: center;"><strong>A1 / P1</strong></td>
+<td>Каталог сторонних приложений и данных для AWS</td>
+<td>SaaS, AMI, контейнеры, Data Products; покупки по подписке или разово; интеграция с биллингом AWS; Private Marketplace для организаций. <a href="https://tutorialsdojo.com/aws-marketplace/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS Ground Station</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Приём и обработка спутниковых данных</td>
+<td>Контакты с антеннами, приём в S3/Kinesis, интеграция с EC2/EKS; расписание слотов; шифрование и аутентификация; low-latency pipeline. <a href="https://tutorialsdojo.com/aws-ground-station/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Cloud Map</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Обнаружение и маршрутизация сервисов</td>
+<td>Namespaces (DNS / API), Health Checks, Service Registrations, интеграция с ECS / App Mesh / Lambda для динамического discovery. <a href="https://tutorialsdojo.com/aws-cloud-map/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon SES</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Массовая и транзакционная рассылка email</td>
+<td>SMTP/API; DKIM/SPF; dedicated IP vs shared; Deliverability Dashboard; Configuration Sets; Event Publishing (SNS, CloudWatch). <a href="https://tutorialsdojo.com/amazon-ses/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>Amazon Pinpoint</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Мультиканальное взаимодействие с клиентами</td>
+<td>Email, SMS, Push, Voice кампании; сегментация; аналитика открытия/кликов; A/B-тестирование; интеграция с Lambda для кастомизации. <a href="https://tutorialsdojo.com/amazon-pinpoint/">Cheat Sheet</a></td>
+</tr>
+<tr>
+<td><strong>AWS IoT Greengrass</strong></td>
+<td style="text-align: center;"><strong>A1 / P2</strong></td>
+<td>Edge-вычисления и взаимодействие с AWS IoT</td>
+<td>Локальный выполнение Lambda, ML-инференс; синхронный/асинхронный обмен сообщениями; Device Shadows; OTA-обновления; защищённые соединения. <a href="https://tutorialsdojo.com/iot-greengrass/">Cheat Sheet</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": ["navigation.sections", "navigation.tabs", "content.action.edit", "search.suggest"], "search": "assets/javascripts/workers/search.f8cc74c7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="js/custom.js"></script>
+      
+    
+  </body>
+</html>
