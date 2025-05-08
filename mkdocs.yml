@@ -1,0 +1,21 @@
+site_name: AWS Solution Architect Pro Checklist
+site_url: https://sergey-rsa.github.ioaws-architect-doc/
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.tabs
+    - content.action.edit
+    - search.suggest
+
+extra_css:
+  - css/custom.css
+
+markdown_extensions:
+  - admonition
+  - toc
+  - pymdownx.details
+  - pymdownx.tasklist
+
+extra_javascript:
+  - js/custom.js
